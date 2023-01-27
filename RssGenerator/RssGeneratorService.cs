@@ -32,9 +32,24 @@ namespace RssGenerator
                 var request = new HttpRequestMessage(HttpMethod.Get, source.Url);
                 request.Headers.Add("User-Agent", "RssGenerator");
 
-                var response = _httpClient.Send(request, cancellationToken);
-                if (!response.IsSuccessStatusCode)
+                HttpResponseMessage response;
+
+                try
+                {
+                    response = _httpClient.Send(request, cancellationToken);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        _logger.Error($"The respose for feed '{source.Name}' was {response.StatusCode}");
+                        continue;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error($"There was an error trying to update feed '{source.Name}'", ex);
+                    
                     continue;
+                }
 
                 var doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(await response.Content.ReadAsStringAsync());
@@ -81,7 +96,7 @@ namespace RssGenerator
                     if (!string.IsNullOrWhiteSpace(source.ArticleLinkPrefix))
                         link = $"{source.ArticleLinkPrefix}/{link.TrimStart('/')}";
 
-                    var pubDateString = node.SelectSingleNode($"{node.XPath}{source.ArticlePubDateXPath}").InnerText;
+                    var pubDateString = node.SelectSingleNode($"{node.XPath}{source.ArticlePubDateXPath}").InnerText.Trim();
                     DateTime? pubDate = null;
 
                     if (!string.IsNullOrWhiteSpace(source.ArticlePubDateRegex))
@@ -89,16 +104,14 @@ namespace RssGenerator
                         var pubDateMatch = Regex.Match(pubDateString, source.ArticlePubDateRegex);
 
                         if (pubDateMatch.Success)
-                        {
                             pubDateString = pubDateMatch.Value;
+                    }
 
-                            if (source.ArticlePubDateReplace?.Any() ?? false)
-                            {
-                                foreach (var key in source.ArticlePubDateReplace.Keys)
-                                {
-                                    pubDateString = pubDateString.Replace(key, source.ArticlePubDateReplace[key]);
-                                }
-                            }
+                    if (source.ArticlePubDateReplace?.Any() ?? false)
+                    {
+                        foreach (var key in source.ArticlePubDateReplace.Keys)
+                        {
+                            pubDateString = pubDateString.Replace(key, source.ArticlePubDateReplace[key]);
                         }
                     }
 
