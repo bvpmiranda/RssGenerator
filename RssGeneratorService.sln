@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssGenerator", "RssGenerator\RssGenerator.csproj", "{4E0D6ABF-44FA-42E0-8559-6F6FC58F71E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssGeneratorService", "RssGeneratorService\RssGeneratorService.csproj", "{DBB5B8CD-8B9A-4291-A027-4BDE427A0467}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4E0D6ABF-44FA-42E0-8559-6F6FC58F71E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E0D6ABF-44FA-42E0-8559-6F6FC58F71E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E0D6ABF-44FA-42E0-8559-6F6FC58F71E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E0D6ABF-44FA-42E0-8559-6F6FC58F71E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB5B8CD-8B9A-4291-A027-4BDE427A0467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB5B8CD-8B9A-4291-A027-4BDE427A0467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB5B8CD-8B9A-4291-A027-4BDE427A0467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB5B8CD-8B9A-4291-A027-4BDE427A0467}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

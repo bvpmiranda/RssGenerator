@@ -244,3 +244,4 @@ ModelManifest.xml
 
 appsettings.notebruno.json
 /WebApplication1
+/RssGeneratorService/appsettings.Development.json
