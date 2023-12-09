@@ -1,11 +1,11 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RssGeneratorApi.Services;
+using RssGenerator.Services;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RssGeneratorService
+namespace RssGenerator
 {
     public class Worker : BackgroundService
     {

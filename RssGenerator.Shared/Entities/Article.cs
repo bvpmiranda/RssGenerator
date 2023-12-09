@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace RssGeneratorService.Entities
+namespace RssGenerator.Entities
 {
     public class Article
     {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace RssGenerator.Models
 {
@@ -18,11 +19,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.channelField;
+                return channelField;
             }
             set
             {
-                this.channelField = value;
+                channelField = value;
             }
         }
 
@@ -32,11 +33,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.versionField;
+                return versionField;
             }
             set
             {
-                this.versionField = value;
+                versionField = value;
             }
         }
     }
@@ -71,11 +72,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.titleField;
+                return titleField;
             }
             set
             {
-                this.titleField = value;
+                titleField = value;
             }
         }
 
@@ -84,11 +85,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -97,11 +98,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.linkField;
+                return linkField;
             }
             set
             {
-                this.linkField = value;
+                linkField = value;
             }
         }
 
@@ -110,11 +111,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.languageField;
+                return languageField;
             }
             set
             {
-                this.languageField = value;
+                languageField = value;
             }
         }
 
@@ -123,11 +124,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.copyrightField;
+                return copyrightField;
             }
             set
             {
-                this.copyrightField = value;
+                copyrightField = value;
             }
         }
 
@@ -136,11 +137,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.docsField;
+                return docsField;
             }
             set
             {
-                this.docsField = value;
+                docsField = value;
             }
         }
 
@@ -149,11 +150,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.generatorField;
+                return generatorField;
             }
             set
             {
-                this.generatorField = value;
+                generatorField = value;
             }
         }
 
@@ -163,11 +164,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.link1Field;
+                return link1Field;
             }
             set
             {
-                this.link1Field = value;
+                link1Field = value;
             }
         }
 
@@ -177,11 +178,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
     }
@@ -206,11 +207,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.hrefField;
+                return hrefField;
             }
             set
             {
-                this.hrefField = value;
+                hrefField = value;
             }
         }
 
@@ -220,11 +221,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.relField;
+                return relField;
             }
             set
             {
-                this.relField = value;
+                relField = value;
             }
         }
 
@@ -234,11 +235,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.typeField;
+                return typeField;
             }
             set
             {
-                this.typeField = value;
+                typeField = value;
             }
         }
     }
@@ -265,11 +266,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.titleField;
+                return titleField;
             }
             set
             {
-                this.titleField = value;
+                titleField = value;
             }
         }
 
@@ -278,11 +279,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -291,11 +292,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.pubDateField;
+                return pubDateField;
             }
             set
             {
-                this.pubDateField = value;
+                pubDateField = value;
             }
         }
 
@@ -304,11 +305,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.linkField;
+                return linkField;
             }
             set
             {
-                this.linkField = value;
+                linkField = value;
             }
         }
 
@@ -317,11 +318,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.guidField;
+                return guidField;
             }
             set
             {
-                this.guidField = value;
+                guidField = value;
             }
         }
     }
@@ -343,11 +344,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.isPermaLinkField;
+                return isPermaLinkField;
             }
             set
             {
-                this.isPermaLinkField = value;
+                isPermaLinkField = value;
             }
         }
 
@@ -357,11 +358,11 @@ namespace RssGenerator.Models
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RssGeneratorApi", "RssGeneratorApi\RssGeneratorApi.csproj", "{34CC0A16-A4EF-4353-8B78-A6AC80E2100E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RssGeneratorService", "RssGeneratorService\RssGeneratorService.csproj", "{08A55234-5E54-4BB4-808C-DAD553AB0550}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RssGenerator.Shared", "RssGenerator.Shared\RssGenerator.Shared.shproj", "{7EF87946-5D37-4571-8324-F75C7A668F3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34CC0A16-A4EF-4353-8B78-A6AC80E2100E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CC0A16-A4EF-4353-8B78-A6AC80E2100E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CC0A16-A4EF-4353-8B78-A6AC80E2100E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CC0A16-A4EF-4353-8B78-A6AC80E2100E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A55234-5E54-4BB4-808C-DAD553AB0550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A55234-5E54-4BB4-808C-DAD553AB0550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A55234-5E54-4BB4-808C-DAD553AB0550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A55234-5E54-4BB4-808C-DAD553AB0550}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9289E161-64CD-403D-9966-C7E8FE697951}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		RssGenerator.Shared\RssGenerator.Shared.projitems*{08a55234-5e54-4bb4-808c-dad553ab0550}*SharedItemsImports = 5
+		RssGenerator.Shared\RssGenerator.Shared.projitems*{34cc0a16-a4ef-4353-8b78-a6ac80e2100e}*SharedItemsImports = 5
+		RssGenerator.Shared\RssGenerator.Shared.projitems*{7ef87946-5d37-4571-8324-f75c7a668f3a}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

@@ -3,9 +3,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RssGeneratorApi.Services;
+using RssGenerator.Services;
 
-namespace RssGeneratorService
+namespace RssGenerator
 {
     public class Program
     {

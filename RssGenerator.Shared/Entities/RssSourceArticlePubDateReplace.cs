@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace RssGeneratorService.Entities
+namespace RssGenerator.Entities
 {
     public class RssSourceArticlePubDateReplace
     {

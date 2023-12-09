@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RssGeneratorService.Entities;
+using RssGenerator.Entities;
 
-namespace RssGeneratorService
+namespace RssGenerator
 {
     public class RssGeneratorContext : DbContext
     {

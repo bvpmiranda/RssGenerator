@@ -1,8 +1,8 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RssGeneratorService;
-using RssGeneratorService.Entities;
+using RssGenerator;
+using RssGenerator.Entities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,7 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace RssGeneratorApi.Services
+namespace RssGenerator.Services
 {
     public class WebScrapperService : IWebScrapperService
     {

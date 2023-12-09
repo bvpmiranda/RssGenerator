@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7ef87946-5d37-4571-8324-f75c7a668f3a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>RssGenerator.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Article.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\RssSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\RssSourceArticlePubDateReplace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RssGeneratorContext.cs" />
+  </ItemGroup>
+</Project>

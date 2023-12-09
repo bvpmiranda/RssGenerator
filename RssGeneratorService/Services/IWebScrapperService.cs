@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace RssGeneratorApi.Services
+namespace RssGenerator.Services
 {
     public interface IWebScrapperService
     {
