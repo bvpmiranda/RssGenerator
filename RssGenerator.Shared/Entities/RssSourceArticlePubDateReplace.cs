@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace RssGenerator.Entities
 {
@@ -16,17 +17,25 @@ namespace RssGenerator.Entities
         {
             modelBuilder.Entity<RssSourceArticlePubDateReplace>(entity =>
             {
+                entity.ToTable("rsssourcearticlepubdatereplaces");
+
                 entity.Property(e => e.Id)
-                    .HasColumnName("RssSourceArticlePubDateReplaceId")
+                    .HasColumnName("rsssourcearticlepubdatereplaceid")
                     .IsRequired()
                     .IsUnicode(false);
 
+                entity.Property(e => e.RssSourceId)
+                    .HasColumnName(nameof(RssSourceId).ToLower())
+                    .IsRequired();
+
                 entity.Property(e => e.Value)
+                    .HasColumnName(nameof(Value).ToLower())
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Replacement)
+                    .HasColumnName(nameof(Replacement).ToLower())
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);

@@ -26,7 +26,7 @@ builder.Services.AddScoped<IRssGenerator, RssGenerator.Services.RssGenerator>();
 builder.Services.AddLogging(c => c.AddConsole());
 
 var connectionString = configuration.GetConnectionString("RssGenerator");
-builder.Services.AddDbContext<RssGeneratorContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddDbContext<RssGeneratorContext>(options => options.UseNpgsql(connectionString));
 
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();

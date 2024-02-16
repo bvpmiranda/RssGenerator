@@ -25,7 +25,7 @@ namespace RssGenerator
                     services.AddSingleton<IConfiguration>(configuration);
 
                     var connectionString = configuration.GetConnectionString("RssGenerator");
-                    services.AddDbContext<RssGeneratorContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)), ServiceLifetime.Singleton);
+                    services.AddDbContext<RssGeneratorContext>(options => options.UseNpgsql(connectionString), ServiceLifetime.Singleton);
 
                     services.AddSingleton<IWebScrapperService, WebScrapperService>();
 

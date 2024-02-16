@@ -19,28 +19,38 @@ namespace RssGenerator.Entities
         {
             modelBuilder.Entity<Article>(entity =>
             {
+                entity.ToTable("articles");
+
                 entity.Property(e => e.Id)
-                    .HasColumnName("ArticleId")
+                    .HasColumnName("articleid")
                     .IsRequired()
                     .HasMaxLength(36)
                     .IsUnicode(false);
 
+                entity.Property(e => e.RssSourceId)
+                    .HasColumnName(nameof(RssSourceId).ToLower())
+                    .IsRequired();
+
                 entity.Property(e => e.Title)
+                    .HasColumnName(nameof(Title).ToLower())
                     .IsRequired()
                     .HasMaxLength(1024)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Link)
+                    .HasColumnName(nameof(Link).ToLower())
                     .IsRequired()
                     .HasMaxLength(1024)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
+                    .HasColumnName(nameof(Description).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.PubDate)
+                    .HasColumnName(nameof(PubDate).ToLower())
                     .IsRequired();
 
                 entity.HasOne(d => d.RssSource)

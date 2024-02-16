@@ -28,70 +28,83 @@ namespace RssGenerator.Entities
         {
             modelBuilder.Entity<RssSource>(entity =>
             {
-                entity.ToTable("RssSources");
+                entity.ToTable("rsssources");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("RssSourceId")
+                    .HasColumnName("rsssourceid")
                     .IsRequired()
                     .IsUnicode(false);
 
                 entity.Property(e => e.Name)
+                    .HasColumnName(nameof(Name).ToLower())
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Url)
+                    .HasColumnName(nameof(Url).ToLower())
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticlesXPath)
+                    .HasColumnName(nameof(ArticlesXPath).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticleTitleXPath)
+                    .HasColumnName(nameof(ArticleTitleXPath).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticleLinkXPath)
+                    .HasColumnName(nameof(ArticleLinkXPath).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticleLinkPrefix)
+                    .HasColumnName(nameof(ArticleLinkPrefix).ToLower())
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticleDescriptionXPath)
+                    .HasColumnName(nameof(ArticleDescriptionXPath).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticlePubDateXPath)
+                    .HasColumnName(nameof(ArticlePubDateXPath).ToLower())
                     .IsRequired()
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticlePubDateHasAgoPattern)
+                    .HasColumnName(nameof(ArticlePubDateHasAgoPattern).ToLower())
                     .IsRequired();
 
                 entity.Property(e => e.ArticlePubDateTimeZone)
+                    .HasColumnName(nameof(ArticlePubDateTimeZone).ToLower())
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticlePubDateFormat)
+                    .HasColumnName(nameof(ArticlePubDateFormat).ToLower())
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ArticlePubDateRegex)
+                    .HasColumnName(nameof(ArticlePubDateRegex).ToLower())
                     .HasMaxLength(4000)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Enabled)
+                    .HasColumnName(nameof(Enabled).ToLower())
                     .IsRequired();
             });
         }
