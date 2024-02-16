@@ -129,7 +129,7 @@ namespace RssGenerator.Services
                             Title = title,
                             Description = description,
                             Link = link,
-                            PubDate = pubDate
+                            PubDate = new DateTime(pubDate.Year, pubDate.Month, pubDate.Day, pubDate.Hour, pubDate.Minute, pubDate.Second, pubDate.Millisecond)
                         });
                     }
                     catch (Exception ex)

@@ -51,6 +51,7 @@ namespace RssGenerator.Entities
 
                 entity.Property(e => e.PubDate)
                     .HasColumnName(nameof(PubDate).ToLower())
+                    .HasColumnType("timestamp")
                     .IsRequired();
 
                 entity.HasOne(d => d.RssSource)
